@@ -50,17 +50,19 @@ const Todolist = () => {
               value={task}
               onChange={(event) => changeTask(event)}
             />
-            <button onClick={addTask} className="addBtn">Add Task</button>
+            <button onClick={addTask} className="addBtn">
+              Add Task
+            </button>
           </div>
           <div className="todos">
-            <ul>
-              {todos.map((todo, index) => (
-                <div key={index} className="task">
-                  {todo.task}
-                  <button onClick={() => removeTodo(index)}>Remove Task</button>
-                </div>
-              ))}
-            </ul>
+            {todos.map((todo, index) => (
+              <div key={index} className="task">
+                {todo.task}
+                <button onClick={() => removeTodo(index)} className="todoBtn">
+                  Remove Task
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
